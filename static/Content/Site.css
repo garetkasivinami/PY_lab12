@@ -244,6 +244,12 @@ textarea.form-control {
     overflow: hidden;
 }
 
+.article-img {
+    width: 60%;
+    border-radius: 5px;
+    margin: 10px 20% 10px 20%;
+}
+
 .btn-createNews {
     width:155px;
     text-align: center;
@@ -274,4 +280,8 @@ img.visibility {
 
 .no-bordered {
     border: 0;
+}
+
+blockquote{
+    text-align: center;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>ACME ADMIN</title>
+    <title>Kino admin</title>
     {% for style in styles %}
     <link href="{{ url_for('static',filename=style) }}" rel="stylesheet" type="text/css" />
     {% endfor %}
@@ -12,7 +12,7 @@
         <ul>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
-                    <a href="{{ admin_index_action }}" class="navbar-brand">Acme admin</a>
+                    <a href="{{ admin_index_action }}" class="navbar-brand">Kino admin</a>
                 </div>
             </nav>
         </ul>

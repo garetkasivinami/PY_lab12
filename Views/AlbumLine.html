@@ -14,12 +14,16 @@
             <p class="card-text">
                 {{ album.Description[:200] }}...
             </p>
+        </div>
+    </div>
+    {% if is_authorized %}
+    <div class="col-md-12">
+        <div class="card-footer">
             <p class="card-text">
-                {% if is_authorized %}
                 <a href="{{ update_album_action }}/{{ album.Id }}" style="font-size: 14px">Edit</a>
                 <a href="{{ delete_album_action }}/{{ album.Id }}" style="font-size: 14px">Delete</a>
-                {% endif %}
             </p>
         </div>
     </div>
+    {% endif %}
 </div>

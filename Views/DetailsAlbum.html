@@ -16,17 +16,19 @@
         <p class="card-text">
             <b>Count of tracks:</b> {{ album.CountOfTracks }}
         </p>
-        {% if is_authorized %}
+    </div>
+    {% if is_authorized %}
+    <div class="card-footer">
         <p class="card-text">
             <a href="{{ update_album_action }}/{{ album.Id }}" style="font-size: 14px">
-                <small class="text-muted">Edit</small>
+                Edit
             </a>
             <a href="{{ delete_album_action }}/{{ album.Id }}" style="font-size: 14px">
-                <small class="text-muted">Delete</small>
+               Delete
             </a>
         </p>
-        {% endif %}
     </div>
+    {% endif %}
 </div>
 
 {% endblock content %}

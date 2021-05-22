@@ -10,7 +10,9 @@ default_parameters = {
     'delete_user_action': '/delete-user',
     'details_album_action': '/details',
     'details_album_action_params': '/details/<int:id>',
-    'index_action' : '/'
+    'index_action' : '/',
+    'about_action' : '/about',
+    'history_action' : '/history',
 }
 
 styles = [
