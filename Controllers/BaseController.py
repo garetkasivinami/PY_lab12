@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect as f_redirect, make_response, session
+from flask import Flask, render_template, redirect as f_redirect, make_response, session, abort
 from ApplicationContext import *
 from Helper import CreateTemplateFileName
 from Api.UserApi import UserApi
@@ -8,15 +8,11 @@ from .Parameters import default_parameters, styles, scripts
 import re
 html_tags_regex = re.compile(r'<[^>]+>')
 
-def render(template, model=None, general_template_name='General', headers = {}):
+def render(template, model={}, general_template_name='General', headers = {}, styles=styles, scripts=scripts, additional_parameters={}):
     template = CreateTemplateFileName(template)
     general_template_name = CreateTemplateFileName(general_template_name)
     user_context = get_user_context()
-    page = None;
-    if not model == None:
-        page = render_template(template, **model, **default_parameters, **user_context, general_template_name=general_template_name, styles=styles, scripts=scripts)
-    else:
-        page = render_template(template, **default_parameters, **user_context, general_template_name=general_template_name, styles=styles, scripts=scripts)
+    page = render_template(template, **model, **default_parameters, **user_context, general_template_name=general_template_name, **additional_parameters, styles=styles, scripts=scripts)
 
     if not 'Content-Type' in headers:
         headers['Content-Type'] = 'text/html'
@@ -35,7 +31,7 @@ def Authorized():
         def wrapper(*args, **kwargs):
             context = get_user_context()
             if not context['is_authorized']:
-                return redirect('/login')
+                return redirect(default_parameters['register_action'])
             return func(*args, **kwargs)
         wrapper.__name__ = func.__name__
         return wrapper
@@ -45,7 +41,6 @@ def get_user_context():
     token = request.cookies.get('account_token')
     active_user = UserApi.get_user_by_token(token)
     is_authorized = not active_user == None
-    session['is_authorized'] = is_authorized
     return {
             'active_user': active_user,
             'is_authorized': is_authorized

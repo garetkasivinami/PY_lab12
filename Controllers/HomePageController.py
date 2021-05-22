@@ -2,7 +2,7 @@ from ApplicationContext import *
 from .BaseController import *
 from Entities.User import User
 
-@app.route('/')
+@app.route(default_parameters['index_action'])
 def Index():
     albums = AlbumApi.get_albums()
     for item in albums:

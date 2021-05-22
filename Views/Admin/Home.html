@@ -1,0 +1,40 @@
+﻿{% extends general_template_name %}
+
+{% block content %}
+{% if user_count > 0%}
+<table>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Username
+        </th>
+        <th>
+            Login
+        </th>
+        <th></th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <th>
+            {{ user.Id }}
+        </th>
+        <th>
+            {{ user.UserName }}
+        </th>
+        <th>
+            {{ user.Login }}
+        </th>
+        <th>
+            <a href="{{ admin_delete_user_action }}/{{ user.Id }}" style="font-size: 14px">
+                Delete
+            </a>
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h5>No available users</h5>
+{% endif %}
+{% endblock content %}

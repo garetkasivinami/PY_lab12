@@ -10,6 +10,10 @@ class UserApi:
         return UserApi._userRepository.GetAll()
 
     @staticmethod
+    def get_user(id):
+        return UserApi._userRepository.Get(id)
+
+    @staticmethod
     def add_user(user):
         UserApi._userRepository.Add(user)
 

@@ -6,6 +6,9 @@ import hashlib
 def CreateTemplateFileName(template_name):
     return f'{template_name}.html'
 
+def SetAdminViewsFolder(template_name):
+    return f'Admin/{template_name}'
+
 def GenerateSalt():
     letters = string.ascii_letters
     return ''.join(random.choice(letters) for i in range(10))

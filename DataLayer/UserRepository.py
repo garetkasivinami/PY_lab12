@@ -7,7 +7,7 @@ class UserRepository(Repository):
     def Update(self, entity):
         db.session.commit()
 
-    def Get(id):
+    def Get(self,id):
         return User.query.get(id)
 
     def GetAll(self):

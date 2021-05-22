@@ -4,6 +4,7 @@ It contains the definition of routes and views for the application.
 """
 from flask import Flask
 from ApplicationContext import *
+from Controllers.Admin.AdminController import *
 from Controllers.HomePageController import *
 from Controllers.AccountController import *
 from Controllers.AlbumController import *

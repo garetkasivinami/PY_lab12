@@ -21,7 +21,7 @@ def Login():
     return render('Login', { 'fields': form })
 
 @app.route(default_parameters['register_action'], methods=['GET', 'POST'])
-def RegisterPost():
+def Register():
     form = RegisterModel()
     if form.validate_on_submit():
         username = form.username.data
