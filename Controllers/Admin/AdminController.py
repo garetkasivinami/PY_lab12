@@ -27,6 +27,11 @@ def Admin_Login():
 
     return render_admin('Login', { 'fields': form })
 
+@app.route(default_parameters['admin_logout_action'], methods=['GET'])
+def Admin_Logout():
+    AdminApi.logout()
+    return redirect_to_admin_index()
+
 @app.route(default_parameters['admin_delete_user_action_params'], methods=['GET'])
 @AdminAuthorized()
 def DeleteUser(id):

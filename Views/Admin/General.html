@@ -13,6 +13,15 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <a href="{{ admin_index_action }}" class="navbar-brand">Kino admin</a>
+                    {% if admin_authorized %}
+                    <div class="btn-lang-group" role="group">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="{{ admin_logout_action }}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
                 </div>
             </nav>
         </ul>

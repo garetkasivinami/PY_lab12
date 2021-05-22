@@ -8,11 +8,11 @@ from .Parameters import default_parameters, styles, scripts
 import re
 html_tags_regex = re.compile(r'<[^>]+>')
 
-def render(template, model={}, general_template_name='General', headers = {}, styles=styles, scripts=scripts, additional_parameters={}):
+def render(template, model={}, general_template_name='General', headers = {}, styles=styles, scripts=scripts, additional_parameters={}, **fargs):
     template = CreateTemplateFileName(template)
     general_template_name = CreateTemplateFileName(general_template_name)
     user_context = get_user_context()
-    page = render_template(template, **model, **default_parameters, **user_context, general_template_name=general_template_name, **additional_parameters, styles=styles, scripts=scripts)
+    page = render_template(template, **model, **default_parameters, **user_context, general_template_name=general_template_name, **additional_parameters, styles=styles, scripts=scripts, **fargs)
 
     if not 'Content-Type' in headers:
         headers['Content-Type'] = 'text/html'
