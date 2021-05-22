@@ -95,6 +95,9 @@
     <Content Include="libman.json" />
     <Content Include="main.css" />
     <Content Include="requirements.txt" />
+    <Content Include="runtime.txt">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\Content\bootstrap-grid.css" />
     <Content Include="static\Content\bootstrap-grid.css.map" />
     <Content Include="static\Content\bootstrap-grid.min.css" />
