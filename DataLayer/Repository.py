@@ -19,4 +19,4 @@ class Repository:
         pass
 
     def Where(self, filterExt):
-        pass
+        return list(filter(filterExt, self.GetAll()))

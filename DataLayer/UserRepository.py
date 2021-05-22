@@ -16,6 +16,3 @@ class UserRepository(Repository):
     def Remove(self, id):
         db.session.delete(id)
         db.session.commit()
-
-    def Where(self, filterExt):
-        return list(filter(filterExt, User.query.all()))

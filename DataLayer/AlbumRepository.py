@@ -15,6 +15,3 @@ class AlbumRepository(Repository):
 
     def GetAll(self):
         return Album.query.all()
-
-    def Where(self, filterExt):
-        return list(filter(filterExt, Album.query.all()))
