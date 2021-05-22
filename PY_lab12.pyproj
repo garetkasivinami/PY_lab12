@@ -124,7 +124,7 @@
     <Content Include="Views\FormTemplateAlbum.html" />
     <Content Include="Views\General.html" />
     <Content Include="Views\GeneralHeader.html" />
-    <Content Include="Views\Index.html" />
+    <Content Include="Views\Home.html" />
     <Content Include="Views\Login.html" />
     <Content Include="Views\Register.html" />
     <Content Include="Views\EditAlbum.html" />

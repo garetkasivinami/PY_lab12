@@ -7,7 +7,7 @@ def Index():
     albums = AlbumApi.get_albums()
     for item in albums:
         item.Description = html_tags_regex.sub('', item.Description)
-    return render('Index', {'albums': albums })
+    return render('Home', {'albums': albums })
 
 @app.route('/users')
 def Users():
