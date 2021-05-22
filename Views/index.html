@@ -1,0 +1,13 @@
+﻿{% extends general_template_name %}
+
+{% block content %}
+
+{%for album in albums%}
+<div class="card news-item">
+    {% include 'AlbumLine.html' %}
+</div>
+{% endfor %}
+
+<h1>It is all...</h1>
+
+{% endblock content %}

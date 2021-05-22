@@ -1,0 +1,7 @@
+﻿{% extends general_template_name %}
+
+{% block content %}
+<form method="post" action="{{ update_album_action }}/{{ fields.id.data }}">
+    {% include "FormTemplateAlbum.html" %}
+</form>
+{% endblock content %}

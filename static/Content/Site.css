@@ -1,0 +1,277 @@
+﻿body {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    min-height: 36px;
+}
+
+header .nav-item {
+    margin-left: 20px;
+}
+
+header .navbar-light a {
+    color: black;
+    font-size: 24px;
+}
+
+    header .navbar-light a.navbar-brand {
+        color: red;
+        font-size: 28px;
+    }
+
+footer a {
+    color: black;
+    margin-left: 10px;
+}
+
+    footer a:hover {
+        color: red;
+        text-decoration: none;
+    }
+
+header .logout {
+    margin-left: 20px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-item img {
+    margin-top: 20px;
+}
+
+.news-item .card-body a {
+    color: red;
+    font-size: 28px;
+}
+
+.news-item p {
+    color: darkslategrey;
+    font-size: 20px;
+}
+
+.news-item .card-body a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.user-link {
+    color: mediumpurple;
+    font-size: 18px;
+}
+
+    .user-link:hover {
+        text-decoration: none;
+        color: purple;
+    }
+
+.post-img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.input-edit > textarea, .input-create > textarea {
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    max-height: 200px;
+}
+
+.input-edit > div > input {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.input-edit > input, .input-create > input {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.edit-img, .post-img {
+    padding: 10px 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.doubleClickLink {
+    background-color: lightgray;
+}
+
+textarea.form-control {
+    min-height: 36px;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.news-item .list-group-item {
+    padding: 8px 15px;
+}
+
+.card.admin-list-item div {
+    padding: 10px;
+}
+
+.card.admin-list-item .list-group-item {
+    padding: 5px;
+}
+
+.card.admin-list-item .card-text {
+    margin: 5px;
+}
+
+#comment-form > .form-horizontal > div > *, .edit-form > *, .edit-form + * , .create-form > .form-group > *{
+    padding-left: 0;
+}
+
+.post-img {
+    padding: 0;
+    float: left;
+    margin-right: 15px;
+}
+
+.btn-group > .btn:not(:last-child) {
+    border-right: 0;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.ua {
+    height: 18px;
+    width: 32px;
+    background: linear-gradient(to bottom, #005bbb 0%,#005bbb 50%,#ffd500 50%,#ffd500 100%);
+}
+
+.en {
+    height: 18px;
+    width: 32px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.ru {
+    height: 18px;
+    width: 32px;
+    background: linear-gradient(to bottom, #fff 0%,#fff 33.3%, #0039a6 33.3%, #0039a6 66.6%, #d52b1e 66.6%, #d52b1e 100%);
+}
+
+.create-card #Name {
+    border: 0px;
+}
+
+.errorHeader > h1 {
+    text-align: center;
+}
+
+.errorHeader > p {
+    font-size: 20px;
+}
+
+.errorHeader > img, .errorHeader > p {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.btn-manage-comments{
+    margin-bottom:10px;
+}
+
+.btn-lang-group > a {
+    margin: 0 5px;
+    border-radius: 2px;
+}
+
+.btn-lang-group{
+    line-height:52px;
+}
+
+.btn-lang-admin{
+    margin-bottom:5px;
+}
+
+.nav-admin{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.create-head{
+    margin-left:15px;
+}
+
+.card-text {
+    overflow: hidden;
+}
+
+.card-img {
+    max-height:300px;
+    overflow: hidden;
+}
+
+.btn-createNews {
+    width:155px;
+    text-align: center;
+}
+
+.btn-search {
+    width:80px;
+    text-align: center;
+}
+
+.btn-admin {
+    width: 320px;
+    text-align: center;
+}
+
+.btn-logoff {
+    width: 95px;
+    text-align: center;
+}
+
+select.form-control.roles {
+    min-height: 150px;
+}
+
+img.visibility {
+    margin-top: 0;
+}
+
+.no-bordered {
+    border: 0;
+}

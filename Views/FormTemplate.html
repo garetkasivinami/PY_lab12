@@ -1,0 +1,16 @@
+﻿<div class="form-horizontal create-form">
+    {{ fields.csrf_token() }}
+    {% for field in fields if field.name != "csrf_token" %}
+    <div class="form-group">
+        {% if field.name != "submit" and not field.type == "HiddenField" %}
+        {{ field.label(class='control-label col-md-2') }}
+        {% endif %}
+        <div class="col-md-10">
+            {{ field }}
+            {% for error in field.errors %}
+            {{ error }}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,34 @@
+﻿<ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="{{ index_action }}" class="navbar-brand">Acme</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {% if is_authorized %}
+                    <li class="nav-item">
+                        <a href="{{ logout_action }}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ delete_user_action }}">Delete user action</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ create_album_action }}">Create album</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{{ login_action }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ register_action }}">Register</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="btn-lang-group" role="group">
+                {% if is_authorized %}
+                <p class="navbar-brand">Hello {{ active_user.UserName }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</ul>
