@@ -9,7 +9,7 @@ def Index():
         albums.reverse()
 
     for item in albums:
-        item.Description = html_tags_regex.sub('', item.Description)
+        item.Description = html_tags_regex.sub('', item.Description).replace('&nbsp;', '')
     return render('Home', {'albums': albums })
 
 @app.route(default_parameters['about_action'])
