@@ -32,6 +32,9 @@
     <Compile Include="Api\UserApi.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Procfile">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="ApplicationContext.py">
       <SubType>Code</SubType>
