@@ -1,6 +1,7 @@
 from ApplicationContext import *
 from .BaseAdminController import *
 from Entities.User import User
+from Models.LoginModel import LoginModel
 
 admin_users = {
     'main': 'mainadmin',

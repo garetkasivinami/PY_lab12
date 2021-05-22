@@ -2,7 +2,8 @@
 
 {% block content %}
 {% if user_count > 0%}
-<table>
+<h5>Users</h5>
+<table class="table">
     <tr>
         <th>
             Id
@@ -17,20 +18,20 @@
     </tr>
     {% for user in users %}
     <tr>
-        <th>
+        <td>
             {{ user.Id }}
-        </th>
-        <th>
+        </td>
+        <td>
             {{ user.UserName }}
-        </th>
-        <th>
+        </td>
+        <td>
             {{ user.Login }}
-        </th>
-        <th>
+        </td>
+        <td>
             <a href="{{ admin_delete_user_action }}/{{ user.Id }}" style="font-size: 14px">
                 Delete
             </a>
-        </th>
+        </td>
     </tr>
     {% endfor %}
 </table>
